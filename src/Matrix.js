@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { pattern1 } from './data';
+// import {Cell} from './Cell';
 
 export default class Matrix extends Component {
   
@@ -23,7 +24,9 @@ export default class Matrix extends Component {
 }
 
 Matrix.defaultProps = {
-  values:[
-    (['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'])
-  
-  ]}
+  values:
+   (() => { 
+     return ( new Array(10).fill(['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00']))
+  }) ()
+  // IIFE imediately invoke function expression itself
+  }

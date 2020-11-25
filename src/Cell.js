@@ -1,4 +1,4 @@
-class Cell extends React.Component {
+export default class Cell extends React.Component {
  
     // we use the constructor to set the INITIAL STATE
     constructor() {
@@ -8,11 +8,25 @@ class Cell extends React.Component {
       }
     }
 
+    // handleKeyPress = (event) => {
+        // console.log("I am here", event.key)
+        // console.log(event)
+        // if (event.key === "a") {
+        // return resize("+") 
+        //   }
+    //   }
+
+    
+
     render() {
         return (
-            <div className= "cell">
+            <div className= "cell"
+            // onClick={this.handleKeyPress}
+            // style={{backgroundcolor: '#333'}}
+            >
 
             </div>
         )
     }
+    
 }
