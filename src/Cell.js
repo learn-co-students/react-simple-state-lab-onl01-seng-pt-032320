@@ -1,32 +1,26 @@
+import React, { Component} from 'react';
+
 export default class Cell extends React.Component {
  
     // we use the constructor to set the INITIAL STATE
-    constructor() {
+    constructor(props) {
       super()
-      this.state = {
-        value: color 
-      }
+      this.state = { color: props .value }
+    } 
+
+    onMouseClick = (event) => {
+      this.setState({color: `#333`})
     }
-
-    // handleKeyPress = (event) => {
-        // console.log("I am here", event.key)
-        // console.log(event)
-        // if (event.key === "a") {
-        // return resize("+") 
-        //   }
-    //   }
-
-    
-
+       
     render() {
-        return (
-            <div className= "cell"
-            // onClick={this.handleKeyPress}
-            // style={{backgroundcolor: '#333'}}
-            >
-
-            </div>
-        )
-    }
-    
+      return  <div onClick={this.onMouseClick} className="cell" style={{backgroundColor: this.state.color}}></div>
+      
+  }
 }
+
+    
+
+    
+
+   
+
