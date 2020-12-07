@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import { allRed } from './data.js'
+import Cell from './Cell'
 
 export default class Matrix extends Component {
   
   genRow = (vals) => {
-    return vals.map(val => <div className="cell"></div>) // replace me and render a cell component instead!
+    //<div className="cell"></div>
+    return vals.map(val => <Cell value={val} />) // replace me and render a cell component instead!
   }
   
   genMatrix = () => {
@@ -18,4 +21,8 @@ export default class Matrix extends Component {
     )
   }
   
+}
+
+Matrix.defaultProps = {
+  values: allRed
 }
