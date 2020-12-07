@@ -7,18 +7,15 @@ class Cell extends Component {
             color: props.value
         }
     }
-    handleOnClicks = (e) => {
-        debugger;
-        //this.setState(color: "#333")
+    handleOnClicks = () => {
+        this.setState({color: "#333"})
     }
     render() {
         return (
             <div 
             className="cell"
             onClick={this.handleOnClicks}
-            
-            >
-                
+            style={{backgroundColor: this.state.color}}>
             </div>
         )
     }
