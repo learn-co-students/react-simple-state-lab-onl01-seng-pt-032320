@@ -5,7 +5,7 @@ export default class Cell extends Component {
 
     constructor(props){
         super()
-        this.state = {color: `${this.props.val}`}
+        this.state = {color: `${this.props.value}`}
     }
 
     changeColor = () => {
