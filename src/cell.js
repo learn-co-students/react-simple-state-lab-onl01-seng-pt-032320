@@ -16,8 +16,8 @@ export default class Cell extends Component {
 
     render(){
         return (
-            <div className="cell" style={{backgroundColor: `${this.state.color}`}}>
-                onClick={() => {this.changeColor()}}
+            <div className="cell" style={{backgroundColor: `${this.state.color}`}}
+                onClick={() => {this.changeColor()}}>
                 {this.state.color}
             </div>
                 )
